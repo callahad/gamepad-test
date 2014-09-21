@@ -10,17 +10,17 @@ function displayInfo() {
 	// Display a notice based on the number of connected Gamepads
 	if (activeGPs.length == 0) {
 		document.getElementById("top").innerHTML = 
-		"<h1>No Gamepads Detected.</h1><h3>If a Gamepad is connected," +
-		" try pressing one of its buttons.</h3>";
+		"<h1>No Gamepads Detected</h1><h3>If a Gamepad is connected," +
+		" try pressing one of its buttons</h3>";
 	}
 	else if (activeGPs.length == 1){
 		document.getElementById("top").innerHTML = 
-		"<h1>1 Gamepad Detected.</h1>";
+		"<h1>1 Gamepad Detected</h1>";
 	}
 	else {
 		document.getElementById("top").innerHTML = 
 		"<h1>" + activeGPs.length + 
-		" Gamepads Detected.</h1>";
+		" Gamepads Detected</h1>";
 	}
 
 	// Clear the GPs div
@@ -60,7 +60,8 @@ function displayButtons() {
 
 	activeGPs.forEach( function(g) {
 		getActiveButtons(g).forEach( function(b){
-			document.getElementById("GPs").innerHTML += "X";
+			var divID = "gp" + String(g.index);
+			document.getElementById(divID).innerHTML += String(b);
 		});
 	});
 	
