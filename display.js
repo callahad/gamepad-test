@@ -71,7 +71,7 @@ function displayButtons() {
 		var bkgrnd = "url('./img/controller.png')";
 		getActiveButtons(g).forEach( function(b){
 			var highlight = ", url('./img/" + String(b) + ".png)";
-			var bkgrnd = bkgrnd + highlight;
+			var bkgrnd = bkgrnd.concat(highlight);
 		});
 		console.log(bkgrnd);
 		document.getElementById(divID).style.background = bkgrnd;
