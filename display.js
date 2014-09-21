@@ -32,9 +32,9 @@ function displayInfo() {
 		var msgPart1 = "<div class='gamepad' id='gp" +
 		String(g.index) +
 		"'>" +
-		"<h2>Gamepad " +
+		"<div class='info'><h2>Gamepad " +
 		String(g.index) +
-		"</h2> <p class='info'><strong>ID:</strong> " +
+		"</h2><strong>ID:</strong> " +
 		g.id +
 		"<br><strong>" +
 		String(g.buttons.length) +
@@ -44,14 +44,14 @@ function displayInfo() {
 
 		if (g.mapping == "") {
 			document.getElementById("GPs").innerHTML += msgPart1 +
-			"None</p><div class='btnDiagram' id='bd" +
+			"None</div><div class='btnDiagram' id='bd" +
 			String(g.index) +
 			"'></div></div>";
 		}
 		else {
 			document.getElementById("GPs").innerHTML += msgPart1 +
 			String(g.mapping)+
-			"</p><div class='btnDiagram' id='bd" +
+			"</div><div class='btnDiagram' id='bd" +
 			String(g.index) +
 			"'></div></div>";;
 		}
