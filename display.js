@@ -64,10 +64,16 @@ function displayButtons() {
 
 	activeGPs.forEach( function(g) {
 		var divID = "bd" + String(g.index);
-		// document.getElementById(divID).innerHTML = "";
-		// getActiveButtons(g).forEach( function(b){
-		// 	document.getElementById(divID).innerHTML += String(b);
-		// });
+
+
+
+		document.getElementById(divID).innerHTML = "";
+		getActiveButtons(g).forEach( function(b){
+			document.getElementById(divID).innerHTML += String(b);
+		});
+
+
+	
 		var bkgrnd = "url('./img/controller.png')";
 		getActiveButtons(g).forEach( function(b){
 			var highlight = ", url('./img/" + String(b) + ".png')";
