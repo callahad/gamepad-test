@@ -68,9 +68,9 @@ function displayButtons() {
 		// getActiveButtons(g).forEach( function(b){
 		// 	document.getElementById(divID).innerHTML += String(b);
 		// });
-		var bkgrnd = "url('./controller.png')";
+		var bkgrnd = "url('./img/controller.png')";
 		getActiveButtons(g).forEach( function(b){
-			var highlight = ", url('./" + String(b) + ".png)";
+			var highlight = ", url('./img/" + String(b) + ".png)";
 			var bkgrnd = bkgrnd + highlight;
 		});
 		document.getElementById(divID).style.background = bkgrnd;
