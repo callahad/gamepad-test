@@ -22,9 +22,9 @@
 }
 
 .btnWrapper {
-    float:right;
+    position: absolute;
+    right: 20px;
 }
 
-.info {
-    float: left;
-}
+/*.info {
+}*/
