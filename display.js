@@ -74,7 +74,7 @@ function displayButtons() {
 			console.log(highlight);
 			var bkgrnd = bkgrnd + highlight;
 		});
-		console.log(background);
+		console.log(bkgrnd);
 		document.getElementById(divID).style.background = bkgrnd;
 	});
 	
