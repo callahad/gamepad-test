@@ -44,12 +44,12 @@ function displayInfo() {
 
 		if (g.mapping == "") {
 			document.getElementById("GPs").innerHTML += msgPart1 +
-			"None</div>;
+			"None</div></div>";
 		}
 		else {
 			document.getElementById("GPs").innerHTML += msgPart1 +
 			String(g.mapping)+
-			"</div>;
+			"</div></div>";
 		}
 
 	});
