@@ -44,14 +44,12 @@ function displayInfo() {
 
 		if (g.mapping == "") {
 			document.getElementById("GPs").innerHTML += msgPart1 +
-			"None</div><div class='btnDiagram' id='bd" +
-			String(g.index) +
-			"'></div></div>";
+			"None</div>;
 		}
 		else {
 			document.getElementById("GPs").innerHTML += msgPart1 +
 			String(g.mapping)+
-			"</div></div>";;
+			"</div>;
 		}
 
 	});
