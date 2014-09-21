@@ -73,13 +73,13 @@ function displayButtons() {
 		});
 
 
-	
+
 		var bkgrnd = "url('./img/controller.png')";
 		getActiveButtons(g).forEach( function(b){
 			var highlight = ", url('./img/" + String(b) + ".png')";
 			bkgrnd = bkgrnd.concat(highlight);
 		});
-		document.getElementById(divID).style.background = bkgrnd;
+		// document.getElementById(divID).style.background = bkgrnd;
 	});
 	
 }
