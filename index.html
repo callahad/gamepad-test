@@ -85,17 +85,17 @@
 			// Display a notice based on the number of connected Gamepads
 			if (activeGPs.length == 0) {
 				document.getElementById("top").innerHTML = 
-				"<h1>No Gamepads detected.</h1><h3>If a Gamepad is connected," +
+				"<h1>No Gamepads Detected.</h1><h3>If a Gamepad is connected," +
 				" try pressing one of its buttons.</h3>";
 			}
 			else if (activeGPs.length == 1){
 				document.getElementById("top").innerHTML = 
-				"<h1>1 Gamepad detected.</h1>";
+				"<h1>1 Gamepad Detected.</h1>";
 			}
 			else {
 				document.getElementById("top").innerHTML = 
 				"<h1>" + activeGPs.length + 
-				" Gamepads detected.</h1>";
+				" Gamepads Detected.</h1>";
 			}
 
 			// Clear the GPs div
@@ -104,8 +104,7 @@
 			// Populate the GPs div with a gamepad div for each connected
 			// gamepad, containing information about that gamepad
 			activeGPs.forEach( function(g){
-				document.getElementById("GPs").innerHTML += 
-				"<div class='gamepad'>" +
+				var msgPart1 = "<div class='gamepad'>" +
 				"<h2>Gamepad " +
 				String(g.index) +
 				"</h2> <strong>ID:</strong> " +
@@ -114,8 +113,17 @@
 				String(g.buttons.length) +
 				"</strong> buttons<br><strong>" +
 				String(g.axes.length) +
-				"</strong> axes"
-				"</div>"
+				"</strong> axes<br><strong>Mapping: </strong>";
+
+				if (g.mapping == "") {
+					document.getElementById("GPs").innerHTML += msgPart1 +
+					"None</div>";
+				}
+				else {
+					document.getElementById("GPs").innerHTML += msgPart1 +
+					String(g.mapping) +
+					"</div>";
+				}
 			});
 		}
 
