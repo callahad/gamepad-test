@@ -22,10 +22,12 @@
 }
 
 .btnDiagram {
+    display: inline-block;
     width: 200px;
     height: 121px;
     background: red;
 }
 
-/*.info {
-}*/
+.info {
+    display: inline-block;
+}
