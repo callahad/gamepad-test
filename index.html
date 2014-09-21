@@ -97,6 +97,26 @@
 				"<h1>" + activeGPs.length + 
 				" Gamepads detected.</h1>";
 			}
+
+			// Clear the GPs div
+			document.getElementById("GPs").innerHTML = "";
+
+			// Populate the GPs div with a gamepad div for each connected
+			// gamepad, containing information about that gamepad
+			activeGPs.forEach( function(g){
+				document.getElementById("GPs").innerHTML += 
+				"<div class='gamepad'>" +
+				"<h2>Gamepad " +
+				String(g.index) +
+				"</h2> <strong>ID:</strong> " +
+				g.id +
+				"<br><strong>" +
+				String(g.buttons.length) +
+				"</strong> buttons<br><strong>" +
+				String(g.axes.length) +
+				"</strong> axes"
+				"</div>"
+			});
 		}
 
 		// Listeners for Gamepads connecting and disconnecting
@@ -126,10 +146,15 @@
     	text-align: left;
     	background: #BFBFBF;
     	padding: 20px;
+    	margin-bottom: 20px;
 
     	-moz-border-radius: 20px;
 		-webkit-border-radius: 20px;
 		border-radius: 20px;
+    }
+
+    .gamepad h2 {
+    	margin: 0;
     }
     </style>
 
@@ -138,9 +163,6 @@
     <div id="top">
    	</div>
    	<div id="GPs">
-   		<div class="gamepad">
-   			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo eros, ultricies eget magna et, tempus iaculis nunc. Vestibulum dictum velit a rhoncus volutpat. Sed libero lorem, ultricies eget gravida id, auctor sed mi. Fusce a elementum turpis, vitae interdum purus. Sed sed lacinia tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam in faucibus nibh, in sagittis enim. Donec pharetra, urna rutrum placerat imperdiet, massa erat auctor elit, at tristique mauris sapien gravida odio. Suspendisse magna felis, molestie sit amet congue in, sollicitudin eu dolor. Vestibulum scelerisque erat non tincidunt vehicula. Suspendisse ullamcorper malesuada interdum
-   		</div>
    	</div>
   </body>
 </html>
