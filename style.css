@@ -8,9 +8,9 @@
 
 .gamepad {
 	text-align: left;
+    height: 161px;
+    margin-bottom: 20px;
 	background: #BFBFBF;
-	padding: 20px;
-	margin-bottom: 20px;
 
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
@@ -22,15 +22,18 @@
 }
 
 .btnDiagram {
-    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top:20px;
     width: 200px;
     height: 121px;
     background: red;
-    margin-left: 50px;
 }
 
 .info {
-    display: inline-block;
+    position: absolute;
+    left: 20px;
+    top: 20px;
     background: blue;
     height: 121px;
 }
