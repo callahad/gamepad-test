@@ -51,9 +51,7 @@ function displayInfo() {
 		else {
 			document.getElementById("GPs").innerHTML += msgPart1 +
 			String(g.mapping)+
-			"</div><div class='btnDiagram' id='bd" +
-			String(g.index) +
-			"'></div></div>";;
+			"</div></div>";;
 		}
 
 	});
