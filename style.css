@@ -24,6 +24,7 @@
 .btnWrapper {
     position: absolute;
     right: 20px;
+    margin: auto 0;
 }
 
 /*.info {
