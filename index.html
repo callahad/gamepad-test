@@ -74,13 +74,7 @@
 		// Displays information on connected Gamepads in the HTML
 		function displayInfo() {
 
-			// Determine which Gamepads are connected, if any
-			var activeGPs = [];
-			navigator.getGamepads().forEach(function(g){
-				if (g.connected) {
-					activeGPs.push(g);
-				}
-			});
+			var activeGPs = getActiveGPs()
 
 			// Display a notice based on the number of connected Gamepads
 			if (activeGPs.length == 0) {
@@ -126,8 +120,32 @@
 					String(g.mapping) +
 					"</div>";
 				}
+
 			});
 		}
+
+		// Determine which Gamepads are connected, if any
+		function getActiveGPs() {
+			var activeGPs = [];
+			navigator.getGamepads().forEach(function(g){
+				if (g.connected) {
+					activeGPs.push(g);
+				}
+			});
+			return activeGPs;
+		}
+
+		function displayButtons() {
+			var activeGPs = getActiveGPs()
+
+			activeGPs.forEach( function(g) {
+				getActiveButtons(g).forEach( function(b){
+					document.getElementById("GPs").innerHTML += "X";
+				});
+			});
+			
+		}
+
 
 		// Listeners for Gamepads connecting and disconnecting
 
@@ -138,6 +156,8 @@
 		window.addEventListener("gamepaddisconnected", function(e) {
 			displayInfo()
 		});
+
+		setInterval( displayButtons, 500);
 
 		displayInfo();
 
