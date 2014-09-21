@@ -28,13 +28,12 @@
     top:20px;
     width: 200px;
     height: 121px;
-    background: red;
+    background: url("./img/controller.png");
 }
 
 .info {
     position: absolute;
     left: 20px;
     top: 20px;
-    background: blue;
     height: 121px;
 }
