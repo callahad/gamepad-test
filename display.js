@@ -44,14 +44,14 @@ function displayInfo() {
 
 		if (g.mapping == "") {
 			document.getElementById("GPs").innerHTML += msgPart1 +
-			"None<div class='btnWrapper'><div class='btnDiagram' id='bd" +
+			"None<div class='btnDiagram' id='bd" +
 			String(g.index) +
 			"'></div></div>";
 		}
 		else {
 			document.getElementById("GPs").innerHTML += msgPart1 +
 			String(g.mapping) +
-			"<div class='btnWrapper'><div class='btnDiagram' id='bd" +
+			"<div class='btnDiagram' id='bd" +
 			String(g.index) +
 			"'></div></div>";;
 		}
@@ -63,7 +63,7 @@ function displayButtons() {
 	var activeGPs = getActiveGPs()
 
 	activeGPs.forEach( function(g) {
-		var divID = "btnWrapper" + String(g.index);
+		var divID = "bd" + String(g.index);
 		document.getElementById(divID).innerHTML = "";
 		getActiveButtons(g).forEach( function(b){
 			document.getElementById(divID).innerHTML += String(b);
