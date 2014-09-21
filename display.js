@@ -31,7 +31,7 @@ function displayInfo() {
 	activeGPs.forEach( function(g){
 		var msgPart1 = "<div class='gamepad' id='gp" +
 		String(g.index) +
-		"'>" +
+		"'><div class='info'" +
 		"<h2>Gamepad " +
 		String(g.index) +
 		"</h2> <strong>ID:</strong> " +
@@ -46,14 +46,14 @@ function displayInfo() {
 			document.getElementById("GPs").innerHTML += msgPart1 +
 			"None</div><div class='btnWrapper' id='btnWrapper" + 
 			String(g.index) +
-			"'></div>";
+			"'></div></div>";
 		}
 		else {
 			document.getElementById("GPs").innerHTML += msgPart1 +
 			String(g.mapping) +
 			"</div><div class='btnWrapper' id='btnWrapper" + 
 			String(g.index) +
-			"'></div>";
+			"'></div></div>";
 		}
 
 	});
