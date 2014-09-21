@@ -32,7 +32,7 @@ function displayInfo() {
 		var msgPart1 = "<div class='gamepad' id='gp" +
 		String(g.index) +
 		"'>" +
-		"<p class=info><h2>Gamepad " +
+		"<p class='info'><h2>Gamepad " +
 		String(g.index) +
 		"</h2> <strong>ID:</strong> " +
 		g.id +
