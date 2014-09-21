@@ -1,0 +1,22 @@
+#top {
+	text-align: center;
+}
+
+#GPs {
+	text-align: center;
+}
+
+.gamepad {
+	text-align: left;
+	background: #BFBFBF;
+	padding: 20px;
+	margin-bottom: 20px;
+
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.gamepad h2 {
+	margin: 0;
+}
