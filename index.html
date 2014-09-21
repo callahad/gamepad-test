@@ -104,7 +104,9 @@
 			// Populate the GPs div with a gamepad div for each connected
 			// gamepad, containing information about that gamepad
 			activeGPs.forEach( function(g){
-				var msgPart1 = "<div class='gamepad'>" +
+				var msgPart1 = "<div class='gamepad' id='gp" +
+				String(g.index) +
+				"'>" +
 				"<h2>Gamepad " +
 				String(g.index) +
 				"</h2> <strong>ID:</strong> " +
