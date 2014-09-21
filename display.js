@@ -73,7 +73,6 @@ function displayButtons() {
 			var highlight = ", url('./img/" + String(b) + ".png')";
 			bkgrnd = bkgrnd.concat(highlight);
 		});
-		console.log(bkgrnd);
 		document.getElementById(divID).style.background = bkgrnd;
 	});
 	
